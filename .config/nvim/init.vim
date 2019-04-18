@@ -13,18 +13,21 @@ Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'sheerun/vim-polyglot'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'editorconfig/editorconfig-vim'
 " For async completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " For Denite features
 Plug 'Shougo/denite.nvim'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
 
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " ALE Configuration
 let g:ale_set_highlights = 0

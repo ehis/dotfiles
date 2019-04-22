@@ -21,11 +21,15 @@ Plug 'Shougo/denite.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mattn/emmet-vim'
+Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
 
 
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
+
+" Ensime Scala
+autocmd BufWritePost *.scala silent :EnTypeCheck
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>

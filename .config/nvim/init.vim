@@ -21,6 +21,7 @@ Plug 'Shougo/denite.nvim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mattn/emmet-vim'
+Plug 'derekwyatt/vim-scala'
 Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
 
 
@@ -39,7 +40,8 @@ let g:ale_set_highlights = 0
 let g:ale_completion_enabled = 1
 let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
 let g:ale_linter_aliases = {'tsx': ['css', 'typescript']}
-let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
+
+let g:ale_linters = {'javascript': ['eslint', 'flow']}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -47,7 +49,6 @@ let g:ale_fixers = {
 \   'typescript': ['prettier'],
 \   'css': ['prettier'],
 \   'jsx': ['eslint', 'stylelint'],
-\   'vue': ['eslint', 'vls'],
 \}
 
 " Set this variable to 1 to fix files when you save them.

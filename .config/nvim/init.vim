@@ -23,11 +23,16 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mattn/emmet-vim'
 Plug 'derekwyatt/vim-scala'
 Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
+Plug 'elixir-editors/vim-elixir'
+Plug 'mhinz/vim-mix-format'
+Plug 'tpope/vim-fugitive'
+
 
 
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
+let g:mix_format_on_save = 1
 
 " Ensime Scala
 autocmd BufWritePost *.scala silent :EnTypeCheck

@@ -26,7 +26,7 @@ Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'tpope/vim-fugitive'
-
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 
 call plug#end()
@@ -51,7 +51,7 @@ let g:ale_linters = {'javascript': ['eslint', 'flow']}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['eslint', 'prettier'],
-\   'typescript': ['prettier'],
+\   'typescript': ['tslint', 'prettier'],
 \   'css': ['prettier'],
 \   'jsx': ['eslint', 'stylelint'],
 \}

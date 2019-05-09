@@ -27,6 +27,8 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'tpope/vim-fugitive'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'rainglow/vim'
 
 
 call plug#end()
@@ -124,6 +126,14 @@ inoremap <A-j> <Esc>:m .+1<CR>==gi
 inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
+
+
+" Copy & Paste to system clipboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+
 
 " Security
 set modelines=0

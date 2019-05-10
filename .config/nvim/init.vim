@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'w0rp/ale'
 Plug 'mhinz/vim-startify'
+Plug 'mhinz/vim-signify'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
@@ -22,13 +23,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mattn/emmet-vim'
 Plug 'derekwyatt/vim-scala'
-Plug 'ensime/ensime-vim', { 'do': ':UpdateRemotePlugins' }
+" Look into setting up Scala Metals
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
-Plug 'tpope/vim-fugitive'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'scrooloose/nerdcommenter'
-Plug 'rainglow/vim'
+Plug 'hashivim/vim-terraform'
 
 
 call plug#end()
@@ -48,7 +48,7 @@ let g:ale_completion_enabled = 1
 let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
 let g:ale_linter_aliases = {'tsx': ['css', 'typescript']}
 
-let g:ale_linters = {'javascript': ['eslint', 'flow']}
+let g:ale_linters = {'javascript': ['eslint', 'flow', 'flow-language-server']}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],

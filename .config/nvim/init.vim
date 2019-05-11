@@ -48,7 +48,7 @@ let g:ale_completion_enabled = 1
 let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
 let g:ale_linter_aliases = {'tsx': ['css', 'typescript']}
 
-let g:ale_linters = {'javascript': ['eslint', 'flow', 'flow-language-server']}
+let g:ale_linters = {'javascript': ['eslint', 'flow-language-server']}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],

@@ -15,15 +15,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
-" For async completion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" For Denite features
-Plug 'Shougo/denite.nvim'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mattn/emmet-vim'
-Plug 'derekwyatt/vim-scala'
-" Look into setting up Scala Metals
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
@@ -34,13 +26,8 @@ Plug 'hashivim/vim-terraform'
 call plug#end()
 
 let g:deoplete#enable_at_startup = 1
+" Elixir
 let g:mix_format_on_save = 1
-
-" Ensime Scala
-autocmd BufWritePost *.scala silent :EnTypeCheck
-
-" NERDTree
-map <C-n> :NERDTreeToggle<CR>
 
 " ALE Configuration
 let g:ale_set_highlights = 0
@@ -99,6 +86,19 @@ let g:fzf_layout = { 'down': '~40%' }
 " previous-history instead of down and up. If you don't like the change,
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
+
+" [[B]Commits] Customize the options used by 'git log':
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+
+" [Tags] Command to generate tags file
+let g:fzf_tags_command = 'ctags -R'
+
+" [Commands] --expect expression for directly executing the command
+let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
 " Collect swap files in a tmp directory
 set directory^=$HOME/.vim/tmp//
@@ -206,7 +206,7 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
-colorscheme industry
+colorscheme pablo
 
 " Italics in code comments
 highlight Comment cterm=italic

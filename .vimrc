@@ -25,13 +25,13 @@ Plug 'hashivim/vim-terraform'
 
 call plug#end()
 
-let g:deoplete#enable_at_startup = 1
 " Elixir
 let g:mix_format_on_save = 1
 
 " ALE Configuration
 let g:ale_set_highlights = 0
 let g:ale_completion_enabled = 1
+let g:ale_completion_delay = 500
 let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
 let g:ale_linter_aliases = {'tsx': ['css', 'typescript']}
 
@@ -110,7 +110,7 @@ syntax on
 filetype plugin indent on
 
 " Pick a leader key
-let mapleader = ","
+let mapleader = " "
 
 " Split window navigation in vim
 nnoremap <C-J> <C-W><C-J>
@@ -134,6 +134,13 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
+" FZF mappings
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>F :GFiles<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>m :Marks<CR>
+nnoremap <silent> <leader>a :Ag<CR>
+nnoremap <silent> <leader>r :Rg<CR>
 
 " Security
 set modelines=0
@@ -207,10 +214,6 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
 colorscheme pablo
-
-" Italics in code comments
-highlight Comment cterm=italic
-
 
 " Turn relative line numbers on
 set relativenumber

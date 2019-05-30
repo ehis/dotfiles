@@ -23,8 +23,14 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
+
 
 call plug#end()
+
+let g:javascript_plugin_jsdoc = 1
+"Flow
+let g:javascript_plugin_flow = 1
 
 " Elixir
 let g:mix_format_on_save = 1

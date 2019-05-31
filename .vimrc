@@ -21,17 +21,23 @@ Plug 'mhinz/vim-mix-format'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'hashivim/vim-terraform'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-fugitive'
 
 
 call plug#end()
+
+let g:javascript_plugin_jsdoc = 1
+"Flow
+let g:javascript_plugin_flow = 1
 
 " Elixir
 let g:mix_format_on_save = 1
 
 " ALE Configuration
 let g:ale_set_highlights = 0
-let g:ale_completion_enabled = 1
-let g:ale_completion_delay = 500
+"let g:ale_completion_delay = 500
 let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
 let g:ale_linter_aliases = {'tsx': ['css', 'typescript']}
 

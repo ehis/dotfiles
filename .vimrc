@@ -3,6 +3,8 @@
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
+set completeopt+=noinsert
+
 " Load plugins here (pathogen, vundle or vim-plug)
 call plug#begin('~/.vim/plugged')
 
@@ -24,9 +26,11 @@ Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 
 call plug#end()
+
 
 let g:javascript_plugin_jsdoc = 1
 "Flow
@@ -37,7 +41,7 @@ let g:mix_format_on_save = 1
 
 " ALE Configuration
 let g:ale_set_highlights = 0
-"let g:ale_completion_delay = 500
+let g:ale_completion_enabled = 1
 let g:ale_linter_aliases = {'jsx': ['css', 'javascript']}
 let g:ale_linter_aliases = {'tsx': ['css', 'typescript']}
 
@@ -219,7 +223,7 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
-colorscheme pablo
+colorscheme peachpuff
 
 " Turn relative line numbers on
 set relativenumber

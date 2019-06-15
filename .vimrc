@@ -13,8 +13,6 @@ Plug 'mhinz/vim-startify'
 Plug 'mhinz/vim-signify'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'itchyny/lightline.vim'
-Plug 'maximbaz/lightline-ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
@@ -27,10 +25,16 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 
 call plug#end()
 
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='dracula'
 
 let g:javascript_plugin_jsdoc = 1
 "Flow
@@ -48,44 +52,23 @@ let g:ale_linter_aliases = {'tsx': ['css', 'typescript']}
 let g:ale_linters = {'javascript': ['eslint', 'flow-language-server']}
 
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint', 'prettier'],
-\   'typescript': ['tslint', 'prettier'],
-\   'css': ['prettier'],
-\   'jsx': ['eslint', 'stylelint'],
-\}
+      \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \   'javascript': ['eslint', 'prettier'],
+      \   'typescript': ['tslint', 'prettier'],
+      \   'css': ['prettier'],
+      \   'jsx': ['eslint', 'stylelint'],
+      \ }
 
 " Set this variable to 1 to fix files when you save them.
 let g:ale_fix_on_save = 1
-
-" ALE Lightline Integration
-let g:lightline = {}
-
-let g:lightline.component_expand = {
-      \  'linter_checking': 'lightline#ale#checking',
-      \  'linter_warnings': 'lightline#ale#warnings',
-      \  'linter_errors': 'lightline#ale#errors',
-      \  'linter_ok': 'lightline#ale#ok',
-      \ }
-
-let g:lightline.component_type = {
-      \     'linter_checking': 'left',
-      \     'linter_warnings': 'warning',
-      \     'linter_errors': 'error',
-      \     'linter_ok': 'left',
-      \ }
-
-
-let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
-
 
 " FZF Configuration
 
 " This is the default extra key bindings
 let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-x': 'split',
+      \ 'ctrl-v': 'vsplit' }
 
 " Default fzf layout
 " - down / up / left / right

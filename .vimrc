@@ -34,7 +34,7 @@ call plug#end()
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='dracula'
+let g:airline_theme='fruit_punch'
 
 let g:javascript_plugin_jsdoc = 1
 "Flow

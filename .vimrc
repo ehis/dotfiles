@@ -18,23 +18,18 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'mattn/emmet-vim'
 Plug 'elixir-editors/vim-elixir'
 Plug 'mhinz/vim-mix-format'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
+Plug 'luochen1990/rainbow'
 
 call plug#end()
 
-
-" Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='fruit_punch'
+"Rainbow Brackets - Set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_active = 1
 
 let g:javascript_plugin_jsdoc = 1
 "Flow
@@ -148,7 +143,7 @@ set ruler
 set encoding=utf-8
 
 " Whitespace
-set wrap
+set nowrap
 set textwidth=79
 set formatoptions=tcqrn1
 set tabstop=2
@@ -175,14 +170,23 @@ set ttyfast
 
 " Status bar
 set laststatus=2
+set statusline=%t       "tail of the filename
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+set statusline+=%{&ff}] "file format
+set statusline+=%h      "help file flag
+set statusline+=%m      "modified flag
+set statusline+=%r      "read only flag
+set statusline+=%y      "filetype
+set statusline+=%=      "left/right separator
+set statusline+=%c,     "cursor column
+set statusline+=%l/%L   "cursor line/total lines
+set statusline+=\ %P    "percent through file]"
 
-" Last line
-set showmode
-set showcmd
 
 " Searching
 nnoremap / /\v
 vnoremap / /\v
+set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -206,6 +210,8 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
 colorscheme peachpuff
+hi Statusline guibg=White ctermfg=Magenta ctermbg=White
+hi Search ctermbg=LightBlue
 
 " Turn relative line numbers on
 set relativenumber

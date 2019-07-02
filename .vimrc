@@ -32,6 +32,7 @@ call plug#end()
 let g:rainbow_active = 1
 
 let g:javascript_plugin_jsdoc = 1
+
 "Flow
 let g:javascript_plugin_flow = 1
 
@@ -211,7 +212,13 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " Colorscheme
 colorscheme peachpuff
 hi Statusline guibg=White ctermfg=Magenta ctermbg=White
-hi Search ctermbg=LightBlue
+hi Search ctermbg=DarkGrey
+
+" Vimdiff color fixes
+highlight DiffAdd    cterm=NONE ctermfg=0 ctermbg=2
+highlight DiffDelete cterm=NONE ctermfg=0 ctermbg=1
+highlight DiffChange cterm=NONE ctermfg=0 ctermbg=6
+highlight DiffText   cterm=NONE ctermfg=0 ctermbg=6
 
 " Turn relative line numbers on
 set relativenumber

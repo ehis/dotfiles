@@ -3,8 +3,6 @@
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
-set completeopt+=noinsert
-
 " Load plugins here (pathogen, vundle or vim-plug)
 call plug#begin('~/.vim/plugged')
 
@@ -26,8 +24,18 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'luochen1990/rainbow'
 Plug 'jparise/vim-graphql'
-
+Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 call plug#end()
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 "Rainbow Brackets - Set to 0 if you want to enable it later via :RainbowToggle
 let g:rainbow_active = 1
@@ -39,6 +47,10 @@ let g:javascript_plugin_flow = 1
 
 " Elixir
 let g:mix_format_on_save = 1
+
+" Go
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " ALE Configuration
 let g:ale_set_highlights = 0

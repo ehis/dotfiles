@@ -5,7 +5,7 @@
 
 [user]
 	name = Ehis Ojielu
-	email = ehis@dialexa.com
+	email = eojielu@gmail.com
 [alias]
 	up = pull --rebase --autostash
 	unstage = reset HEAD --

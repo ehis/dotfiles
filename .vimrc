@@ -22,9 +22,8 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'luochen1990/rainbow'
 Plug 'jparise/vim-graphql'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main'  }
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -36,9 +35,6 @@ call plug#end()
 
 " Deoplete
 let g:deoplete#enable_at_startup = 1
-
-"Rainbow Brackets - Set to 0 if you want to enable it later via :RainbowToggle
-let g:rainbow_active = 1
 
 let g:javascript_plugin_jsdoc = 1
 

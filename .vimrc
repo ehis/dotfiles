@@ -314,7 +314,7 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
 colorscheme delek
-hi Statusline guibg=White ctermfg=Magenta ctermbg=White
+hi Statusline guibg=White ctermfg=White ctermbg=Magenta
 hi Search ctermbg=DarkGrey
 
 " Vimdiff color fixes

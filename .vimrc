@@ -330,4 +330,5 @@ highlight Comment cterm=italic gui=italic
 set relativenumber
 
 " Set code folding configuration
-" set foldmethod=syntax 
+" set foldmethod=syntax
+

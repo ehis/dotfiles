@@ -18,13 +18,16 @@ Plug 'mhinz/vim-mix-format'
 Plug 'scrooloose/nerdcommenter'
 Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'liuchengxu/eleline.vim'
 
 call plug#end()
+
+" DVC
+autocmd! BufNewFile,BufRead Dvcfile,*.dvc setfiletype yaml
 
 " CoC
 " if hidden is not set, TextEdit might fail.
@@ -274,17 +277,17 @@ set ttyfast
 
 " Status bar
 set laststatus=2
-set statusline=%t       "tail of the filename
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
-set statusline+=%{&ff}] "file format
-set statusline+=%h      "help file flag
-set statusline+=%m      "modified flag
-set statusline+=%r      "read only flag
-set statusline+=%y      "filetype
-set statusline+=%=      "left/right separator
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file]"
+"set statusline=%t       "tail of the filename
+"set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
+"set statusline+=%{&ff}] "file format
+"set statusline+=%h      "help file flag
+"set statusline+=%m      "modified flag
+"set statusline+=%r      "read only flag
+"set statusline+=%y      "filetype
+"set statusline+=%=      "left/right separator
+"set statusline+=%c,     "cursor column
+"set statusline+=%l/%L   "cursor line/total lines
+"set statusline+=\ %P    "percent through file]"
 
 
 " Searching
@@ -313,15 +316,15 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
-colorscheme delek
-hi Statusline guibg=White ctermfg=White ctermbg=Magenta
-hi Search ctermbg=DarkGrey
+colorscheme ron
+hi Statusline guibg=White ctermfg=White ctermbg=Blue
+hi Search ctermbg=Green
 
 " Vimdiff color fixes
-highlight DiffAdd    cterm=NONE ctermfg=0 ctermbg=2
-highlight DiffDelete cterm=NONE ctermfg=0 ctermbg=1
-highlight DiffChange cterm=NONE ctermfg=0 ctermbg=6
-highlight DiffText   cterm=NONE ctermfg=0 ctermbg=6
+"highlight DiffAdd    cterm=NONE ctermfg=0 ctermbg=2
+"highlight DiffDelete cterm=NONE ctermfg=0 ctermbg=1
+"highlight DiffChange cterm=NONE ctermfg=0 ctermbg=6
+"highlight DiffText   cterm=NONE ctermfg=0 ctermbg=6
 
 " Turn relative line numbers on
 set relativenumber

@@ -7,10 +7,6 @@
 	name = Ehis Ojielu
 	email = ehis@dialexa.com
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status -s
 	up = pull --rebase --autostash
 	unstage = reset HEAD --
 	last = log -1 HEAD

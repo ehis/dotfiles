@@ -1,6 +1,7 @@
 # alias
 alias lsa="ls -a"
 alias lsal="ls -alh"
+alias lsla="ls -alh"
 alias prune="git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D"
 # set GO workspace path
 set -x -U GOPATH $HOME/go

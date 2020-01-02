@@ -1,2 +1,0 @@
-/usr/local/anaconda3
-/usr/local/anaconda3/envs/ed-data

@@ -20,7 +20,6 @@ Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'jparise/vim-graphql'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/eleline.vim'
 

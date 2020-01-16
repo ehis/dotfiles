@@ -22,6 +22,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/eleline.vim'
+Plug 'eemed/sitruuna.vim'
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 
@@ -66,8 +68,8 @@ inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Use `[c` and `]c` to navigate diagnostics
-nmap <silent> [c <Plug>(coc-diagnostic-prev)
-nmap <silent> ]c <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -91,10 +93,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
-
-" Remap for format selected region
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
   autocmd!
@@ -213,15 +211,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 
-" move lines up and down
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
-
-
 " Copy & Paste to system clipboard
 noremap <Leader>y "*y
 noremap <Leader>p "*p
@@ -315,9 +304,9 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
-colorscheme ron
+colorscheme sitruuna
 hi Statusline guibg=White ctermfg=White ctermbg=Blue
-hi Search ctermbg=Green
+highlight Comment cterm=italic gui=italic
 
 " Vimdiff color fixes
 "highlight DiffAdd    cterm=NONE ctermfg=0 ctermbg=2
@@ -330,3 +319,4 @@ set relativenumber
 
 " Set code folding configuration
 " set foldmethod=syntax
+

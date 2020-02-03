@@ -13,34 +13,35 @@ env:
   # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
 
-# Color (iiamblack)
+# Previous Color (iiamblack)
+# Color (icebergish)
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xffffff'
+    background: '0x1b1d1c'
+    foreground: '0xc6c8d1'
 
   # Normal colors
   normal:
-    black:   '0x393939'
-    red:     '0xda4939'
-    green:   '0x519f50'
-    yellow:  '0xcc7833'
-    blue:    '0x6d9cbe'
-    magenta: '0x9f5079'
-    cyan:    '0x435d75'
-    white:   '0xdddddd'
+    black:   '0x161821'
+    red:     '0xe27878'
+    green:   '0x4b4e38'
+    yellow:  '0xe2a478'
+    blue:    '0x84a0c6'
+    magenta: '0xa093c7'
+    cyan:    '0x89b8c2'
+    white:   '0x9d9ea4'
 
   # Bright colors
   bright:
-    black:   '0x474747'
-    red:     '0xff6c5c'
-    green:   '0xa5c261'
-    yellow:  '0xbc9458'
-    blue:    '0xd0d0ff'
-    magenta: '0xa761c2'
-    cyan:    '0x6e98a4'
-    white:   '0xdddddd'
+    black:   '0x6b7089'
+    red:     '0xe98989'
+    green:   '0x838864'
+    yellow:  '0xe9b189'
+    blue:    '0x91acd1'
+    magenta: '0xada0d3'
+    cyan:    '0x95c4ce'
+    white:   '0xd2d4de'
 
   # Font configuration
 font:
@@ -52,7 +53,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Jetbrains Mono  
+    family: IBM Plex Mono  
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -63,7 +64,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Jetbrains Mono  
+    family: IBM Plex Mono  
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -74,7 +75,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Jetbrains Mono  
+    family: IBM Plex Mono  
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -85,7 +86,7 @@ font:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Jetbrains Mono  
+    family: IBM Plex Mono  
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic

@@ -24,6 +24,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/eleline.vim'
 Plug 'eemed/sitruuna.vim'
 Plug 'jparise/vim-graphql'
+Plug 'cocopon/iceberg.vim'
 
 call plug#end()
 
@@ -304,7 +305,8 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
-colorscheme sitruuna
+"colorscheme sitruuna
+colorscheme iceberg
 hi Statusline guibg=White ctermfg=White ctermbg=Blue
 highlight Comment cterm=italic gui=italic
 

@@ -25,6 +25,7 @@ Plug 'liuchengxu/eleline.vim'
 Plug 'eemed/sitruuna.vim'
 Plug 'jparise/vim-graphql'
 Plug 'cocopon/iceberg.vim'
+Plug 'wadackel/vim-dogrun'
 
 call plug#end()
 
@@ -306,7 +307,8 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
 "colorscheme sitruuna
-colorscheme iceberg
+"colorscheme iceberg
+colorscheme dogrun
 hi Statusline guibg=White ctermfg=White ctermbg=Blue
 highlight Comment cterm=italic gui=italic
 

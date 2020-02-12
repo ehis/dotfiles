@@ -25,7 +25,7 @@ Plug 'liuchengxu/eleline.vim'
 Plug 'eemed/sitruuna.vim'
 Plug 'jparise/vim-graphql'
 Plug 'cocopon/iceberg.vim'
-Plug 'wadackel/vim-dogrun'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 call plug#end()
 
@@ -308,7 +308,8 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " Colorscheme
 "colorscheme sitruuna
 "colorscheme iceberg
-colorscheme dogrun
+"colorscheme dogrun
+colorscheme challenger_deep
 hi Statusline guibg=White ctermfg=White ctermbg=Blue
 highlight Comment cterm=italic gui=italic
 

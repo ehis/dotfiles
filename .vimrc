@@ -24,7 +24,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/eleline.vim'
 Plug 'eemed/sitruuna.vim'
 Plug 'jparise/vim-graphql'
-Plug 'sainnhe/sonokai'
 
 call plug#end()
 
@@ -306,17 +305,7 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
 
-"colorscheme sitruuna
-
-" important!!
-set termguicolors
-
-" the configuration options should be placed before `colorscheme sonokai`
-let g:sonokai_style = 'shusia'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
-
-colorscheme sonokai
+colorscheme sitruuna
 
 hi Statusline guibg=White ctermfg=White ctermbg=Blue
 highlight Comment cterm=italic gui=italic

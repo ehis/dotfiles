@@ -24,3 +24,7 @@ end
 # !! Contents within this block are managed by 'conda init' !!
 eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
+
+
+# https://starship.rs/guide/#%F0%9F%9A%80-installation
+starship init fish | source

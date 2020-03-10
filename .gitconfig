@@ -12,6 +12,8 @@
 	last = log -1 HEAD
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	publish = push -u
+  st = status
+  fix = "!f() { nvim `git diff --name-only`; }; f"
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -19,7 +21,7 @@
 	required = true
 [core]
 	excludesfile = /Users/ehis/.gitignore_global
-	editor = vim
+	editor = nvim
 [credential]
 	helper = osxkeychain
 [pull]

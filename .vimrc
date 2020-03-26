@@ -24,6 +24,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/eleline.vim'
 Plug 'eemed/sitruuna.vim'
 Plug 'jparise/vim-graphql'
+Plug 'ayu-theme/ayu-vim'
+Plug 'sainnhe/sonokai'
 
 call plug#end()
 
@@ -192,6 +194,8 @@ let g:fzf_tags_command = 'ctags -R'
 " [Commands] --expect expression for directly executing the command
 let g:fzf_commands_expect = 'alt-enter,ctrl-x'
 
+set rtp+=/usr/local/opt/fzf
+
 " Collect swap files in a tmp directory
 set directory^=$HOME/.vim/tmp//
 
@@ -304,8 +308,20 @@ set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
+set termguicolors     " enable true colors support
 
-colorscheme sitruuna
+"let ayucolor="light"  " for light version of theme
+"let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
+"colorscheme ayu
+
+
+"the configuration options should be placed before `colorscheme sonokai`
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_disable_italic_comment = 1
+
+colorscheme sonokai
 
 hi Statusline guibg=White ctermfg=White ctermbg=Blue
 highlight Comment cterm=italic gui=italic

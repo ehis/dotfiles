@@ -26,6 +26,7 @@ Plug 'eemed/sitruuna.vim'
 Plug 'jparise/vim-graphql'
 Plug 'ayu-theme/ayu-vim'
 Plug 'sainnhe/sonokai'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 call plug#end()
 

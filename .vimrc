@@ -210,10 +210,10 @@ filetype plugin indent on
 let mapleader = " "
 
 " Split window navigation in vim
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
 
 
 " Copy & Paste to system clipboard
@@ -310,13 +310,6 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
 set termguicolors     " enable true colors support
-
-"let ayucolor="light"  " for light version of theme
-"let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
-"colorscheme ayu
-
-
 "the configuration options should be placed before `colorscheme sonokai`
 let g:sonokai_style = 'andromeda'
 let g:sonokai_enable_italic = 1

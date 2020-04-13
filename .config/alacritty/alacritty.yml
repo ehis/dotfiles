@@ -18,7 +18,7 @@ env:
 colors:
   # Default colors
   primary:
-    background: "0x2d2a2e"
+    background: "0x000000"
     foreground: '0xffffff'
 
   # Normal colors

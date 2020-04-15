@@ -13,36 +13,31 @@ env:
   # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
 
-
-# Colors (custom)
+# sonokai maia
 colors:
-  # Default colors
   primary:
-    background: "0x000000"
-    foreground: '0xffffff'
+    background: "0x273136"
+    foreground: "0xe1e2e3"
 
-  # Normal colors
   normal:
-    black:   '0x393939'
-    red:     '0xda4939'
-    green:   '0x519f50'
-    yellow:  '0xcc7833'
-    blue:    '0x6d9cbe'
-    magenta: '0x9f5079'
-    cyan:    '0x435d75'
-    white:   '0xdddddd'
+    black: "0x1c1e1f"
+    red: "0xf76c7c"
+    green: "0x9cd57b"
+    yellow: "0xe3d367"
+    blue: "0x78cee9"
+    magenta: "0xbaa0f8"
+    cyan: "0xf3a96a"
+    white: "0xe1e2e3"
 
-  # Bright colors
   bright:
-    black:   '0x474747'
-    red:     '0xff6c5c'
-    green:   '0xa5c261'
-    yellow:  '0xbc9458'
-    blue:    '0xd0d0ff'
-    magenta: '0xa761c2'
-    cyan:    '0x6e98a4'
-    white:   '0xdddddd'
-
+    black: "0x1c1e1f"
+    red: "0xf76c7c"
+    green: "0x9cd57b"
+    yellow: "0xe3d367"
+    blue: "0x78cee9"
+    magenta: "0xbaa0f8"
+    cyan: "0xf3a96a"
+    white: "0xe1e2e3"
 
 # Font configuration
 font:

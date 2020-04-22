@@ -14,6 +14,8 @@
 	publish = push -u
   st = status
   fix = "!f() { nvim `git diff --name-only`; }; f"
+  uptags = push --follow-tags
+  downtags = fetch --tags
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -28,3 +30,9 @@
 	rebase = true
 [rebase]
 	autoStash = true
+[mergetool]
+    prompt = true 
+[merge]
+    tool = nvimdiff
+[mergetool "nvimdiff"]
+    cmd = "nvim -d -u ~/.config/nvim/init.vim \"$LOCAL\" \"$MERGED\" \"$REMOTE\""

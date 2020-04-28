@@ -22,7 +22,7 @@ colors:
     foreground: "0xe3e1e4"
 
   normal:
-    black: "0x1a181a"
+    black: '0x01060e'
     red: "0xf85e84"
     green: "0x9ecd6f"
     yellow: "0xe5c463"
@@ -32,7 +32,7 @@ colors:
     white: "0xe3e1e4"
 
   bright:
-    black: "0x1a181a"
+    black: '0x686868'
     red: "0xf85e84"
     green: "0x9ecd6f"
     yellow: "0xe5c463"

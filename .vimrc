@@ -209,12 +209,18 @@ filetype plugin indent on
 " Pick a leader key
 let mapleader = " "
 
-" Split window navigation in vim
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
+" Set tags for vim-fugitive
+set tags^=.git/tags
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 " Copy & Paste to system clipboard
 noremap <Leader>y "*y

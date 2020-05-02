@@ -27,11 +27,22 @@ Plug 'jparise/vim-graphql'
 Plug 'ayu-theme/ayu-vim'
 Plug 'sainnhe/sonokai'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
 " DVC
 autocmd! BufNewFile,BufRead Dvcfile,*.dvc setfiletype yaml
+
+" Prevent refresh in Netrw when navigating
+augroup netrw_mapping
+  autocmd!
+  autocmd filetype netrw call NetrwMapping()
+augroup END
+
+function! NetrwMapping()
+  nnoremap <silent> <buffer> <c-l> :TmuxNavigateRight<CR>
+endfunction
 
 " CoC
 " if hidden is not set, TextEdit might fail.
@@ -215,12 +226,6 @@ set tags^=.git/tags
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
-
-" Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
 
 " Map Y to act like D and C, i.e. to yank until EOL, rather than act as yy,
 " which is the default

@@ -28,6 +28,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'sainnhe/sonokai'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'bignimbus/pop-punk.vim'
 
 call plug#end()
 
@@ -330,11 +331,12 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " Colorscheme
 set termguicolors     " enable true colors support
 "the configuration options should be placed before `colorscheme sonokai`
-let g:sonokai_style = 'shusia'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
+"let g:sonokai_style = 'shusia'
+"let g:sonokai_enable_italic = 1
+"let g:sonokai_disable_italic_comment = 1
 
-colorscheme sonokai
+"colorscheme sonokai
+colorscheme pop-punk
 
 hi Statusline guibg=White ctermfg=White ctermbg=Blue
 highlight Comment cterm=italic gui=italic

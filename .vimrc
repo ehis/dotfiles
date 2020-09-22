@@ -19,6 +19,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'hashivim/vim-terraform'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'liuchengxu/eleline.vim'
@@ -28,7 +29,7 @@ Plug 'ayu-theme/ayu-vim'
 Plug 'sainnhe/sonokai'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'bignimbus/pop-punk.vim'
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 call plug#end()
 
@@ -330,13 +331,15 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 
 " Colorscheme
 set termguicolors     " enable true colors support
+
 "the configuration options should be placed before `colorscheme sonokai`
-"let g:sonokai_style = 'shusia'
+" andromeda, shusia, maia, atlantis, default
+"let g:sonokai_style = 'maia'
 "let g:sonokai_enable_italic = 1
 "let g:sonokai_disable_italic_comment = 1
-
 "colorscheme sonokai
-colorscheme pop-punk
+
+colorscheme challenger_deep
 
 hi Statusline guibg=White ctermfg=White ctermbg=Blue
 highlight Comment cterm=italic gui=italic

@@ -14,66 +14,34 @@ env:
   TERM: xterm-256color
 
 
-
-# [old theme] https://github.com/sainnhe/sonokai/tree/master/alacritty
-# [current theme] https://github.com/challenger-deep-theme/alacritty/blob/master/challenger-deep.yml
-# Callenger Deep
+# Kitty
 colors:
-  # Default colors
+  ## Default colors
   primary:
-    background: '0x1b182c'
-    foreground: '0xcbe3e7'
+    background: '#000000'
+    foreground: '#dddddd'
 
   # Normal colors
   normal:
-    black:   '0x100e23'
-    red:     '0xff8080'
-    green:   '0x95ffa4'
-    yellow:  '0xffe9aa'
-    blue:    '0x91ddff'
-    magenta: '0xc991e1'
-    cyan:    '0xaaffe4'
-    white:   '0xcbe3e7'
+    black:   '#727372'
+    red:     '#cc0403'
+    green:   '#19cb00'
+    yellow:  '#cecb00'
+    blue:    '#0d73cc'
+    magenta: '#cb1ed1'
+    cyan:    '#0dcdcd'
+    white:   '#dddddd'
 
   # Bright colors
   bright:
-    black:   '0x565575'
-    red:     '0xff5458'
-    green:   '0x62d196'
-    yellow:  '0xffb378'
-    blue:    '0x65b2ff'
-    magenta: '0x906cff'
-    cyan:    '0x63f2f1'
-    white:   '0xa6b3cc'
-
-#Kitty
-#colors:
-  ## Default colors
-  #primary:
-    #background: '#000000'
-    #foreground: '#dddddd'
-
-  ## Normal colors
-  #normal:
-    #black:   '#000000'
-    #red:     '#cc0403'
-    #green:   '#19cb00'
-    #yellow:  '#cecb00'
-    #blue:    '#0d73cc'
-    #magenta: '#cb1ed1'
-    #cyan:    '#0dcdcd'
-    #white:   '#dddddd'
-
-  ## Bright colors
-  #bright:
-    #black:   '#767676'
-    #red:     '#f2201f'
-    #green:   '#23fd00'
-    #yellow:  '#fffd00'
-    #blue:    '#1a8fff'
-    #magenta: '#fd28ff'
-    #cyan:    '#14ffff'
-    #white:   '#ffffff'
+    black:   '#767676'
+    red:     '#f2201f'
+    green:   '#23fd00'
+    yellow:  '#fffd00'
+    blue:    '#1a8fff'
+    magenta: '#fd28ff'
+    cyan:    '#14ffff'
+    white:   '#ffffff'
 
 
 # Font configuration

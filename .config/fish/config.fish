@@ -68,3 +68,7 @@ starship init fish | source
 set -gx PNPM_HOME /Users/ehis/Library/pnpm
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
+
+# vscode fish integration
+string match -q "$TERM_PROGRAM" vscode
+and . (code --locate-shell-integration-path fish)
